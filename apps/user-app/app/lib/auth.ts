@@ -58,7 +58,8 @@ export const authOptions = {
         // TODO: can u fix the type here? Using any is bad
         async session({ token, session }: any) {
             session.user.id = token.sub
-
+            console.log(token)
+            console.log(session)
             return session
         }
     }
